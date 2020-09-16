@@ -5,10 +5,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 @Service
 public class PostService {
-    public ArrayList<Post> listAllPosts(){
-        return new ArrayList<Post> (Arrays.asList(new Post("first"),new Post("second"),new Post("third")));
+    public List<Post> listAllPosts(){
+        return new ArrayList<Post> (Arrays.asList(
+                new Post("first", new Date()),
+                new Post("second", new Date()),
+                new Post("third", new Date())
+        ));
     }
 }
