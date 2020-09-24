@@ -16,24 +16,33 @@ public class Post implements Serializable {
     private Integer likes;
     private Date creationDate;
 
-    public Post(Long id,String text,Date creationDate){
+    public Post(){
+    }
+
+    public Post(Long id, String text, Date creationDate) {
         this.id = id;
         this.text = text;
         this.creationDate = creationDate;
         this.likes = 0;
     }
-    public String getText(){
-        return this.text;
-    }
-    public Integer getLikes(){
-        return this.likes;
-    }
-    public Date getCreationDate() {
-        return this.creationDate;
-    }
-    public Long getId(){return this.id;}
 
-    public void setLikes(Integer count){
-        this.likes = count;
+    public String getText() {
+        return text;
+    }
+
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
